@@ -1,0 +1,21 @@
+# application.yml
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://docker:3306/inventoryservice
+    username: inventoryservice
+    password: inventoryservice
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  application:
+    name: inventory-service
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

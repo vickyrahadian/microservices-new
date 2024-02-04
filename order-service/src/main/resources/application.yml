@@ -1,0 +1,21 @@
+# application.yml
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://docker:3306/orderservice
+    username: orderservice
+    password: orderservice
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: order-service
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
