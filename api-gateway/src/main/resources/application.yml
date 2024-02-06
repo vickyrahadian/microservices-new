@@ -17,6 +17,10 @@ spring:
           uri: lb://order-service
           predicates:
             - Path=/api/order
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/api/inventory
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
@@ -27,6 +31,11 @@ spring:
           uri: http://localhost:8761
           predicates:
             - Path=/eureka/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8181/realms/spring-boot-microservices-realm
 
 logging:
   level:

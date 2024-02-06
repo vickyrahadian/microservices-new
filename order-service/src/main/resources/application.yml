@@ -3,7 +3,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://docker:3306/orderservice
+    url: jdbc:mysql://2.tcp.ngrok.io:11224/orderservice
     username: orderservice
     password: orderservice
   jpa:
